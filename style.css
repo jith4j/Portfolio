@@ -174,7 +174,7 @@ h5 {
 @media only screen and (max-width: 1024px) {
   .about-title {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 80px;
   }
 
   .about-content img {
@@ -191,7 +191,8 @@ h5 {
 }
 
 .profile-section {
-  padding: 80px 300px;
+  padding: 0px 300px;
+  padding-top: 80px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -243,7 +244,8 @@ input {
 
 @media only screen and (max-width: 1024px) {
   .profile-section {
-    padding: 30px 0px;
+    padding: 0px 0px;
+    padding-top: 30px;
     font-family: Arial, Helvetica, sans-serif !important;
   }
 
@@ -318,6 +320,7 @@ input {
 }
 
 .resume h3 {
+  padding-top: 80px;
   padding-bottom: 20px;
 }
 
@@ -370,6 +373,10 @@ input {
 
 .center {
   text-align: center;
+}
+
+#contact{
+  padding-top: 80px;
 }
 
 .contact h5 {
