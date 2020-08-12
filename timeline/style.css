@@ -162,5 +162,13 @@ a {
 }
 
 .edu-date{
-	opacity: 0.5;
+	opacity: 0.4;
+}
+
+h3{
+	color: #ff4a4a!important;
+}
+
+p{
+	color: #615e5e!important;
 }
