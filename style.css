@@ -39,12 +39,12 @@ a:hover {
 
 h1 {
   font-size: 80px;
-  font-family: "Avenir Next";
+  font-family: "Avenir Next"!important;
 }
 
 h2 {
   font-size: 70px;
-  font-family: "Avenir Next";
+  font-family: "Avenir Next"!important;
 }
 
 h3 {
@@ -89,12 +89,10 @@ h5 {
 
   h1 {
     font-size: 60px;
-    font-family: "Avenir Next";
   }
 
   h2 {
     font-size: 50px;
-    font-family: "Avenir Next";
   }
 
   h3 {
