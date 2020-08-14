@@ -1,3 +1,5 @@
+// Type writting effect
+
 const texts = ["Developer. ", "Programmer. ", "Techie. "];
 let count = 0;
 let index = 0;
@@ -21,6 +23,8 @@ let letter = "";
   setTimeout(type, 400);
 })();
 
+// navbar hamburger effect
+
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
@@ -38,3 +42,16 @@ navLinks.addEventListener("click", () => {
         link.classList.toggle("fade");
       });
 });
+
+// text float appear effect
+function scrollAppear() {
+  var introText = document.querySelector('.intro-text');
+  var introPosition = introText.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 1.4;
+
+  if(introPosition < screenPosition) {
+    introText.classList.add('intro-text-appear');
+  }
+}
+
+window.addEventListener('scroll', scrollAppear);

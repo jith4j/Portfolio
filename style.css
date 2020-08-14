@@ -53,6 +53,10 @@ nav{
   z-index: 3;
 }
 
+.nav-links li{
+  opacity: 1;
+}
+
 @media only screen and (max-width: 1024px) {
   .line {
     width: 30px;
@@ -303,6 +307,17 @@ h5 {
 
 .about-content p {
   margin: 0 400px;
+}
+
+.intro-text{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s all ease-in-out;
+}
+
+.intro-text-appear{
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 @media only screen and (max-width: 1024px) {
