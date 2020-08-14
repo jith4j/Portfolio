@@ -19,14 +19,111 @@ a:hover {
   color: #ff4a4a;
 }
 
-.navbar-brand {
-  font-size: 30px;
+nav{
+  height: 10vh;
+  background-color: #212529;
+  position: fixed;
+  width: 100%;
 }
 
-.nav-item {
-  font-size: 20px;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-brand {
+  font-size: 30px;
+  color: #fff;
+  float: left;
+  height: 100%;
+  width: 120px;
+  background-color: #ff4a4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 1024px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+  }
+  .nav-brand {
+    color: #fff;
+    float: left;
+    height: 100%;
+    width: 120px;
+    background-color: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+  }
+  nav {
+    position: fixed;
+    z-index: 2;
+  }
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+  .nav-links {
+    position: fixed;
+    background-color: #ff4a4a;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 100% -10%);
+    -webkit-clip-path: circle(50px at 100% -10%);
+    transition: all 1s ease;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1500px at 90% -10%);
+    -webkit-clip-path: circle(1500px at 90% -10%);
+    pointer-events: all;
+  }
+  .landing {
+    flex-direction: column;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  .nav-links li a{
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1){
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2){
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3){
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4){
+    transition: all 0.5s ease 0.8s;
+  }
+  li.fade{
+    opacity: 1;
+  }
 }
 
 .lander {
@@ -45,6 +142,7 @@ a:hover {
 
 .typing{
   position: relative;
+  z-index: 0;
 }
 
 .typing::after{
