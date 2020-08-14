@@ -42,12 +42,11 @@ nav{
 }
 
 .nav-brand {
-  font-size: 30px;
+  font-size: 32px;
   color: #fff;
   float: left;
   height: 100%;
   width: 120px;
-  background-color: #ff4a4a;
   display: flex;
   align-items: center;
   justify-content: center;
