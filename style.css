@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  font-family: sans-serif;  
+  font-family: sans-serif;
 }
 
 body {
@@ -19,11 +19,12 @@ a:hover {
   color: #ff4a4a;
 }
 
-nav{
+nav {
   height: 10vh;
   background-color: #212529;
   position: fixed;
   width: 100%;
+  z-index: 2;
 }
 
 .nav-links {
@@ -33,6 +34,7 @@ nav{
   height: 100%;
   justify-content: space-around;
   align-items: center;
+  margin: auto;
 }
 
 .nav-links li a {
@@ -53,80 +55,8 @@ nav{
   z-index: 3;
 }
 
-.nav-links li{
+.nav-links li {
   opacity: 1;
-}
-
-@media only screen and (max-width: 1024px) {
-  .line {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px;
-  }
-  .nav-brand {
-    color: #fff;
-    float: left;
-    height: 100%;
-    width: 120px;
-    background-color: #212529;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-  }
-  nav {
-    position: fixed;
-    z-index: 2;
-  }
-  .hamburger {
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-    z-index: 2;
-  }
-  .nav-links {
-    position: fixed;
-    background-color: #ff4a4a;
-    height: 100vh;
-    width: 100%;
-    flex-direction: column;
-    clip-path: circle(50px at 100% -10%);
-    -webkit-clip-path: circle(50px at 100% -10%);
-    transition: all 1s ease;
-    pointer-events: none;
-  }
-  .nav-links.open {
-    clip-path: circle(1500px at 90% -10%);
-    -webkit-clip-path: circle(1500px at 90% -10%);
-    pointer-events: all;
-  }
-  .landing {
-    flex-direction: column;
-  }
-  .nav-links li{
-    opacity: 0;
-  }
-  .nav-links li a{
-    font-size: 25px;
-  }
-  .nav-links li:nth-child(1){
-    transition: all 0.5s ease 0.2s;
-  }
-  .nav-links li:nth-child(2){
-    transition: all 0.5s ease 0.4s;
-  }
-  .nav-links li:nth-child(3){
-    transition: all 0.5s ease 0.6s;
-  }
-  .nav-links li:nth-child(4){
-    transition: all 0.5s ease 0.8s;
-  }
-  li.fade{
-    opacity: 1;
-  }
 }
 
 .lander {
@@ -137,18 +67,18 @@ nav{
   color: #fff;
 }
 
-.intro{
+.intro {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.typing{
+.typing {
   position: relative;
   z-index: 0;
 }
 
-.typing::after{
+.typing::after {
   content: "";
   position: absolute;
   right: -5px;
@@ -159,23 +89,23 @@ nav{
   animation: blink 0.5s infinite ease;
 }
 
-@keyframes blink{
-  0%{
+@keyframes blink {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
 h1 {
   font-size: 80px;
-  font-family: "Avenir Next"!important;
+  font-family: "Avenir Next" !important;
 }
 
 h2 {
   font-size: 70px;
-  font-family: "Avenir Next"!important;
+  font-family: "Avenir Next" !important;
 }
 
 h3 {
@@ -209,65 +139,6 @@ h5 {
   color: #ff4a4a;
 }
 
-@media only screen and (max-width: 1024px) {
-  .lander {
-    text-align: center;
-    padding-top: 280px;
-    background-color: #212529;
-    height: 100vh;
-    color: #fff;
-  }
-
-  .typing::after{
-    top: 0px;
-  }
-
-  h1 {
-    font-size: 60px;
-  }
-
-  h2 {
-    font-size: 50px;
-  }
-
-  h3 {
-    font-size: 30px;
-  }
-
-  h4 {
-    font-size: 20px;
-  }
-
-  h5 {
-    font-size: 15px;
-  }
-
-  .lander-container span {
-    color: #ff4a4a;
-  }
-
-  .social-link {
-    padding-top: 180px;
-  }
-
-  .social-link i {
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 28px;
-    color: #fff;
-  }
-}
-
-@media only screen and (max-height: 700px) {
-  .lander {
-    text-align: center;
-    padding-top: 200px;
-    background-color: #212529;
-    height: 100vh;
-    color: #fff;
-  }
-}
-
 .parallax {
   background-image: url("./images/profile-bw.jpg");
 
@@ -284,7 +155,7 @@ h5 {
   text-align: center;
 }
 
-.grey-bg{
+.grey-bg {
   background-color: #dadada38;
   padding-bottom: 20px;
 }
@@ -309,34 +180,15 @@ h5 {
   margin: 0 400px;
 }
 
-.intro-text{
+.intro-text {
   opacity: 0;
   transform: translateY(20px);
   transition: 0.8s all ease-in-out;
 }
 
-.intro-text-appear{
+.intro-text-appear {
   opacity: 1;
   transform: translateY(0px);
-}
-
-@media only screen and (max-width: 1024px) {
-  .about-title {
-    text-align: center;
-    padding-top: 80px;
-  }
-
-  .about-content img {
-    width: 140px;
-    float: none;
-    padding-left: 0px;
-    margin-top: 0px;
-  }
-
-  .about-content p {
-    margin: 40px 0px;
-    padding: 0 20px;
-  }
 }
 
 .profile-section {
@@ -388,66 +240,6 @@ input {
   width: 200px;
 }
 
-@media only screen and (max-width: 1024px) {
-  .profile-section {
-    padding: 0px 0px;
-    padding-top: 30px;
-  }
-
-  .profile {
-    padding-left: 0px;
-    width: 100%;
-    float: none;
-    text-align: center;
-  }
-
-  .profile-content h5 {
-    padding-top: 20px;
-  }
-
-  .profile h4 {
-    font-weight: bold;
-  }
-
-  .skills {
-    padding: 50px 20px;
-    text-align: center;
-  }
-
-  .skills h4 {
-    font-weight: bold;
-  }
-
-  .progress-bar {
-    background-color: #212529;
-  }
-
-  .skills-content h5 {
-    padding-top: 20px;
-    text-align: left;
-  }
-
-  input {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 18px;
-    font-size: 18px;
-    margin-left: 0px;
-    margin-right: 0px;
-    border: 2px solid #212529;
-    font-size: 16px;
-    width: 100%;
-  }
-
-  .button{
-    border-radius: 100px;
-  }
-
-  .about-button input {
-    width: 50%;
-  }
-}
-
 .resume {
   text-align: center;
 }
@@ -489,38 +281,11 @@ input {
   color: #ff4a4a;
 }
 
-@media only screen and (max-width: 1024px) {
-  .resume #honours-show {
-    height: 2300px;
-  }
-
-  .resume #education-show {
-    height: 600px;
-  }
-
-  .edu-container {
-    margin: 0px 20px;
-    margin-bottom: 30px;
-    padding: 30px;
-    border-radius: 10px;
-  }
-
-  .resume #honours {
-    width: 45%;
-    font-size: 12px;
-  }
-
-  .resume #education {
-    width: 45%;
-    font-size: 12px;
-  }
-}
-
 .center {
   text-align: center;
 }
 
-#contact{
+#contact {
   padding-top: 80px;
 }
 
@@ -541,20 +306,10 @@ input {
 }
 
 .contact-icon a {
-  color: #ff4a4a!important;
+  color: #ff4a4a !important;
 }
 
-@media only screen and (max-width: 1024px) {
-  .contact-icon {
-    padding: 40px;
-    font-size: 20px;
-    border: 2px solid #212529;
-    margin: 20px 20px;
-    border-radius: 20px;
-  }
-}
-
-.container{
+.container {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -597,7 +352,7 @@ footer {
   color: #fff;
 }
 
-.footer-icon i:hover{
+.footer-icon i:hover {
   color: #ff4a4a;
 }
 
@@ -606,18 +361,17 @@ footer {
   background-color: #212529;
 }
 
-.footer-name{
+.footer-name {
   color: #ff4a4a;
   font-size: 18px;
 }
 
-@media only screen and (max-width: 1024px) {
-  footer .row {
-    margin: 0;
-  }
-
-  .footer .container {
+@media only screen and (max-height: 700px) {
+  .lander {
     text-align: center;
-    padding: 40px 40px;
+    padding-top: 200px;
+    background-color: #212529;
+    height: 100vh;
+    color: #fff;
   }
 }
