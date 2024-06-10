@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="./assets/icon.png">
   <link rel="stylesheet" href="./styles.css">
   <script src="./script.js"></script>
 </head>
@@ -16,22 +18,22 @@
   <div class="wrapper">
     <div class="header">
       <div class="header-contents author-header">
-        <div class="header-item active author-active" onclick="redirectToHyperlinksPage()">Home</div>
         <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
       </div>
     </div>
     <div class="body-contents-author">
       <div class="side-nav-bar" id="side-nav-bar">
         <div class="close-btn" onclick="toggleSidebar()">&times;</div>
+        <div class="header-item" onclick="scrollToSection(event, '#home-contents', true)">Home</div>
         <div class="header-item" onclick="scrollToSection(event, '#about-section', true)">About</div>
         <div class="header-item" onclick="scrollToSection(event, '#skills-section', true)">Skills</div>
-        <div class="header-item" onclick="scrollToSection(event, '#eductaion-section', true)">Edu.</div>
+        <div class="header-item" onclick="scrollToSection(event, '#eductaion-section', true)">Education</div>
         <div class="header-item" onclick="scrollToSection(event, '#experience-section', true)">Exp.</div>
         <div class="header-item" onclick="scrollToSection(event, '#projects-section', true)">Projects</div>
         <div class="header-item" onclick="scrollToSection(event, '#awards-section', true)">Awards</div>
       </div>
-      <div class="body-sec">
-        <div class="top-section">
+      <div class="body-sec" id="home">
+        <div class="top-section" id="home-contents">
           <div class="titles">
             <div class="author-name">
               <div><span class="set-col">J</span>ITH</div>
@@ -54,16 +56,12 @@
           <div class="sec-heading">About<span class="set-col">.</span></div>
           <div class="skills-set">
             <div class="about-author">
-              Experienced data engineer and web developer with a bachelor’s in
-              Computer Science and Engineering and pursuing a Master's in Data
-              Science, possessing excellent communication and problem-solving
-              skills. Proficient in programming languages like Python, R, C,
-              Java, and JavaScript, and web development tools like HTML5,
-              CSS3, and NodeJS. Skilled in data science techniques such as
-              data analysis, machine learning, data visualization, and BI
-              tools like Tableau and Power BI. Strong experience in ETL
-              development using SQL and SSIS for data integration and
-              migration projects with a focus on data accuracy and quality.
+              Experienced data engineer and web developer with a bachelor’s in Computer Science and Engineering and
+              pursuing a Master's in Data Science, possessing excellent communication and problem-solving skills.
+              Proficient in programming languages like Python, R, C, Java, and JavaScript, and web development tools
+              like HTML5, CSS3, and NodeJS. Skilled in data science techniques such as data analysis, machine learning,
+              data visualization, and BI tools like Tableau and Power BI. Strong experience in ETL development using SQL
+              and SSIS for data integration and migration projects with a focus on data accuracy and quality.
             </div>
           </div>
         </div>
@@ -276,6 +274,42 @@
           <div class="skills-set">
             <div class="course">
               <div class="each-set">
+                Semantic Word Search (Capstone project & University of Western Australia)
+              </div>
+              <div>The University of Western Australia</div>
+              <div class="dates">May 2023</div>
+              <div class="course-list">
+                <ul>
+                  <li>
+                    Implemented a Wiki QA (Question Answering) framework using
+                    sequence models and various NLP features.
+                  </li>
+                  <li>
+                    Utilized the
+                    <span class="bold">Microsoft Research WikiQA</span>
+                    Corpus, a collection of question and sentence pairs, to
+                    train and test the framework.
+                  </li>
+                  <li>
+                    Developed a deep learning model with word embedding,
+                    feature extraction (such as PoS tags, TF-IDF, named entity
+                    tags, and word match), and a sequence model (e.g.,
+                    Bi-LSTM) with attention for improved performance.
+                  </li>
+                </ul>
+                <div class="each-set">Tools:</div>
+                <div class="each-lang-wrap">
+                  <div class="each-lang">Python</div>
+                  <div class="each-lang">Jupyter Notebook</div>
+                  <div class="each-lang">Word Embedding</div>
+                  <div class="each-lang">TensorFlow</div>
+                  <div class="each-lang">Data Wrangling Techniques</div>
+                  <div class="each-lang">Feature Extraction</div>
+                </div>
+              </div>
+            </div>
+            <div class="course">
+              <div class="each-set">
                 Wiki QA (Question Answering) Framework
               </div>
               <div>The University of Western Australia</div>
@@ -418,6 +452,13 @@
             </div>
           </div>
         </div>
+        <footer class="footer">
+          <div class="footer-content">
+            <a href="https://github.com/jith4j" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jith4j" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:jith4j@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </footer>
       </div>
     </div>
   </div>
