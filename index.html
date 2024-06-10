@@ -1,516 +1,426 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>JITH</title>
+<html lang="en">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-129689885-5"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jith</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js"></script>
+</head>
 
-      gtag("config", "UA-129689885-5");
-    </script>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <!-- Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- icon -->
-    <link rel="icon" href="./images/glitch.png" />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"
-      rel="stylesheet"
-    />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Script for hiding and showing timeline -->
-    <script>
-      $(document).ready(function () {
-        $("#honours").click(function () {
-          $("#honours-show").show();
-          $("#hono").show();
-          $("#edu").hide();
-          $("#education-show").hide();
-        });
-        $("#education").click(function () {
-          $("#honours-show").hide();
-          $("#hono").hide();
-          $("#edu").show();
-          $("#education-show").show();
-        });
-      });
-    </script>
-
-    <!-- <script>
-      $("body").scrollspy({ target: "#nav" });
-    </script> -->
-
-    <!--Font awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <link rel="stylesheet" href="style.css" />
-
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 800px)"
-      href="mobile-style.css"
-    />
-  </head>
-
-  <body data-spy="scroll" data-target=".navbar" data-offset="0">
-    <!-- Navbar -->
-    <!-- <div class="header">
-      <nav
-        class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark nav-scoll-effect"
-      >
-        <a class="navbar-brand" href="http://www.jith.epizy.com">JITH</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNavAltMarkup"
-        >
-          <div class="navbar-nav nav-padd">
-            <a class="nav-item nav-link" href="#home">
-              Home
-            </a>
-            <a class="nav-item nav-link" href="#about">About Me</a>
-            <a class="nav-item nav-link" href="#timeline">Timeline</a>
-            <a class="nav-item nav-link" href="#contact">Contact Me</a>
-          </div>
-        </div>
-      </nav>
-    </div> -->
-
-    <nav id="nav">
-      <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <h5 class="nav-brand">JITH</h5>
-      <div class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#timeline">Timeline</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-      </div>
-    </nav>
-
-    <!-- Navbar End -->
-
-    <!-- Lander -->
-    <div class="lander" id="home">
-      <div class="lander-container">
-        <h1>HELLO WORLD<span class="h1-color">!</span></h1>
-        <h2>I am <span class="name">JITH</span></h2>
-        <div class="intro">
-          <h4 class="typing"></h4>
-        </div>
-      </div>
-      <div class="social-link">
-        <a href="https://github.com/jith4j">
-          <i class="fa fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/jith4j">
-          <i class="fa fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/proxima__centauri___/">
-          <i class="fa fa-instagram"></i>
-        </a>
-        <a href="https://twitter.com/Jith__James">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a href="https://wa.me/918848155515">
-          <i class="fa fa-whatsapp"></i>
-        </a>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="header-contents author-header">
+        <div class="header-item active author-active" onclick="redirectToHyperlinksPage()">Home</div>
+        <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
       </div>
     </div>
-    <!-- Lander End -->
-
-    <!-- About Me -->
-    <div class="grey-bg">
-      <div class="parallax"></div>
-      <div class="about" id="about">
-        <div class="about-title">
-          <h3>ABOUT ME</h3>
-          <p>LET ME INTRODUCE MYSELF..</p>
-        </div>
-        <div class="about-content intro-text">
-          <!-- <img src="./images/profile1.jpg" alt="profile image" /> -->
-          <p style="color: #808080;">
-            I am a final year undergraduate student at
-            <a href="http://www.marian.ac.in" target="_blank">
-              <b>Marian Engineering College</b>.
-            </a>
-            I am a Web Developer and a Programming Enthusiast from
-            Thiruvananthapuram, Kerala who focuses on writing
-            <b>clean and efficient code</b>.<br />
-            <a href="#contact" style="color: #ff4a4a;">
-              Let's make something special together.
-            </a>
-          </p>
-        </div>
+    <div class="body-contents-author">
+      <div class="side-nav-bar" id="side-nav-bar">
+        <div class="close-btn" onclick="toggleSidebar()">&times;</div>
+        <div class="header-item" onclick="scrollToSection(event, '#about-section', true)">About</div>
+        <div class="header-item" onclick="scrollToSection(event, '#skills-section', true)">Skills</div>
+        <div class="header-item" onclick="scrollToSection(event, '#eductaion-section', true)">Edu.</div>
+        <div class="header-item" onclick="scrollToSection(event, '#experience-section', true)">Exp.</div>
+        <div class="header-item" onclick="scrollToSection(event, '#projects-section', true)">Projects</div>
+        <div class="header-item" onclick="scrollToSection(event, '#awards-section', true)">Awards</div>
       </div>
-      <!-- About End -->
-
-      <!-- Profile -->
-      <div class="profile-section" id="profile">
-        <div class="profile">
-          <h4>PROFILE</h4>
-          <div class="profile-content">
-            <h5>Full Name:</h5>
-            <p>JITH</p>
-            <h5>Age:</h5>
-            <p>21</p>
-            <h5>Email:</h5>
-            <p><a href="mailto:jith4j@gmail.com">jith4j@gmail.com</a></p>
-            <h5>Age:</h5>
-            <p><a href="https://github.com/jith4j">github.com/jith4j</a></p>
+      <div class="body-sec">
+        <div class="top-section">
+          <div class="titles">
+            <div class="author-name">
+              <div><span class="set-col">J</span>ITH</div>
+              <div><span class="set-col">J</span>AMES</div>
+              <div><span class="set-col">F</span>ERNANDEZ</div>
+            </div>
+            <div class="author-titles">
+              <div class="title-bar">Data Engineer</div>
+              <div class="title-bar">Data Scientist</div>
+              <div class="title-bar">Web Developer</div>
+            </div>
+          </div>
+          <div class="img">
+            <img class="my-img" src="./assets/img.png" alt="" />
           </div>
         </div>
-        <div class="skills">
-          <h4>SKILLS</h4>
-          <div class="skills-content">
-            <h5>PYTHON</h5>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 90%;"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                90%
+
+        <!-- About section -->
+        <div class="skills-section" id="about-section">
+          <div class="sec-heading">About<span class="set-col">.</span></div>
+          <div class="skills-set">
+            <div class="about-author">
+              Experienced data engineer and web developer with a bachelor’s in
+              Computer Science and Engineering and pursuing a Master's in Data
+              Science, possessing excellent communication and problem-solving
+              skills. Proficient in programming languages like Python, R, C,
+              Java, and JavaScript, and web development tools like HTML5,
+              CSS3, and NodeJS. Skilled in data science techniques such as
+              data analysis, machine learning, data visualization, and BI
+              tools like Tableau and Power BI. Strong experience in ETL
+              development using SQL and SSIS for data integration and
+              migration projects with a focus on data accuracy and quality.
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills section -->
+        <div class="skills-section" id="skills-section">
+          <div class="sec-heading">Skills<span class="set-col">.</span></div>
+          <div class="skills-set">
+            <div class="each-set">Programming language and Tools:</div>
+            <div class="each-lang-wrap">
+              <div class="each-lang">Python</div>
+              <div class="each-lang">SQL</div>
+              <div class="each-lang">R</div>
+              <div class="each-lang">C</div>
+              <div class="each-lang">Java</div>
+              <div class="each-lang">Javascript</div>
+              <div class="each-lang">Jupyter Notebook</div>
+              <div class="each-lang">Microsoft Power Apps</div>
+            </div>
+            <div class="each-set">Data Science:</div>
+            <div class="each-lang-wrap">
+              <div class="each-lang">Data Analysis</div>
+              <div class="each-lang">Machine Learning</div>
+              <div class="each-lang">Power BI</div>
+              <div class="each-lang">Tableau</div>
+              <div class="each-lang">SSIS</div>
+            </div>
+            <div class="each-set">Libraries:</div>
+            <div class="each-lang-wrap">
+              <div class="each-lang">Pandas</div>
+              <div class="each-lang">Matplotlib</div>
+              <div class="each-lang">NumPy</div>
+              <div class="each-lang">Keeras</div>
+              <div class="each-lang">GGPlot</div>
+              <div class="each-lang">Gensim</div>
+              <div class="each-lang">Seaborn</div>
+            </div>
+            <div class="each-set">Web Development:</div>
+            <div class="each-lang-wrap">
+              <div class="each-lang">HTML 5</div>
+              <div class="each-lang">CSS</div>
+              <div class="each-lang">SCSS</div>
+              <div class="each-lang">Javascript</div>
+              <div class="each-lang">Node js</div>
+              <div class="each-lang">Responsive Web design</div>
+              <div class="each-lang">Angular js</div>
+              <div class="each-lang">Next js</div>
+            </div>
+            <div class="each-set">Cloud Platform:</div>
+            <div class="each-lang-wrap">
+              <div class="each-lang">Google Cloud Platform</div>
+              <div class="each-lang">Azure</div>
+            </div>
+            <div class="each-set">Version Control:</div>
+            <div class="each-lang-wrap">
+              <div class="each-lang">Git</div>
+              <div class="each-lang">Git Hub</div>
+              <div class="each-lang">TFS</div>
+            </div>
+            <div class="each-set">Personal:</div>
+            <div class="each-lang-wrap">
+              <div class="each-lang">Managerial Competence</div>
+              <div class="each-lang">Collaboration</div>
+              <div class="each-lang">Detail Oriented</div>
+              <div class="each-lang">Adaptability</div>
+              <div class="each-lang">Self-Motivated</div>
+              <div class="each-lang">Attention to detail</div>
+              <div class="each-lang">Team player</div>
+              <div class="each-lang">Time management</div>
+              <div class="each-lang">Problem-solving</div>
+              <div class="each-lang">Decision-making</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education section -->
+        <div class="skills-section" id="eductaion-section">
+          <div class="sec-heading">
+            Education<span class="set-col">.</span>
+          </div>
+          <div class="skills-set">
+            <div class="course">
+              <div class="each-set">The University Of Western Australia</div>
+              <div>Masters of Data Science</div>
+              <div class="dates">2022-2024</div>
+              <div class="course-list">
+                <ul>
+                  <li>Data Mining</li>
+                  <li>Data Analysis</li>
+                  <li>Database Management</li>
+                  <li>Machine Learning</li>
+                  <li>Data Visualisation</li>
+                  <li>Statistics</li>
+                </ul>
               </div>
             </div>
-            <h5>HTML5</h5>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 90%;"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                90%
+            <div class="course">
+              <div class="each-set">
+                APJ Abdul Kalam Technological University
               </div>
-            </div>
-            <h5>CSS3</h5>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 80%;"
-                aria-valuenow="80"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                80%
+              <div>
+                Bachelor of Technology in
+                <span class="bold">Computer Science and Engineering</span>
               </div>
-            </div>
-            <h5>C</h5>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 80%;"
-                aria-valuenow="80"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                80%
-              </div>
-            </div>
-            <h5>JS</h5>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 70%;"
-                aria-valuenow="70"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                70%
-              </div>
-            </div>
-            <h5>SQL</h5>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 70%;"
-                aria-valuenow="70"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                70%
-              </div>
-            </div>
-            <h5>JAVA</h5>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 70%;"
-                aria-valuenow="70"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                70%
-              </div>
-            </div>
-            <h5>LaTex</h5>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 70%;"
-                aria-valuenow="70"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                70%
-              </div>
-            </div>
-            <h5>PHP</h5>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 60%;"
-                aria-valuenow="60"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                60%
-              </div>
-            </div>
-            <h5>NODE</h5>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 25%;"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                25%
-              </div>
-            </div>
-            <h5>FLUTTER</h5>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 20%;"
-                aria-valuenow="20"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                20%
+              <div class="dates">2017-2021</div>
+              Cumulative GPA: <span class="bold"> 9.5/10 </span>
+              <div class="course-list">
+                <ul>
+                  <li>Data Structures</li>
+                  <li>Algorithms</li>
+                  <li>Operating Systems</li>
+                  <li>Computer Networks</li>
+                  <li>Web Development</li>
+                  <li>Software Engineering</li>
+                  <li>Project Management</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="about-button">
-          <a
-            href="https://drive.google.com/file/d/1AiSH5iWxF1xk6xnglfZ5WsJAl9S3WlyA/view?usp=sharing"
-          >
-            <input
-              type="button"
-              class="button"
-              value="VIEW RESUME"
-              style="background-color: #212529; color: #fff;"
-            />
-          </a>
-        </div>
-      </div>
-      <!-- Profile End -->
-    </div>
 
-    <!-- Timeline -->
-    <div class="resume" id="timeline">
-      <h3 id="timeline">MY TIMELINE</h3>
-      <input
-        type="button"
-        class="button"
-        value="Honours, Project & Works"
-        id="honours"
-        style="background-color: #666f77; color: #fff;"
-      />
-      <input
-        type="button"
-        class="button"
-        value="Education"
-        id="education"
-        style="background-color: #212529; color: #fff;"
-      />
-
-      <h4 id="edu" style="display: none;">EDUCATION</h4>
-      <h4 id="hono">HONOURS, PROJECTS & WORKS</h4>
-      <embed
-        type="text/html"
-        src="./timeline/honours.html"
-        width="100%"
-        id="honours-show"
-      />
-      <embed
-        type="text/html"
-        src="./timeline/education.html"
-        width="100%"
-        id="education-show"
-        style="display: none;"
-      />
-    </div>
-    <!-- Timeline End -->
-
-    <!-- Contact -->
-    <div class="container" id="contact">
-      <h3>GET IN TOUCH</h3>
-      <div class="row">
-        <!-- <div class="col-md-6">
-          <div class="center contact">
-            <form action="">
-              
-              <input type="text" placeholder="Name" id="name" required />
-              <input type="text" placeholder="Email" id="name" required />
-              <input type="text" placeholder="Subject" id="name" required />
-              <textarea
-                placeholder="Message"
-                id="Message"
-                rows="4"
-                cols="50"
-                required
-              ></textarea>
-              <input
-                type="submit"
-                class="button"
-                style="border: none; color: #fff; background-color: #666f77;"
-              />
-            </form>
+        <!-- Experience section -->
+        <div class="skills-section" id="experience-section">
+          <div class="sec-heading">
+            Experience<span class="set-col">.</span>
           </div>
-        </div> -->
-        <div class="col-md-12 center">
-          <div class="contact-icon">
-            <i class="fa fa-phone"></i>
-            <h5>Call Me:</h5>
-            <p><a href="tel:+918848155515">+91-8848155515</a></p>
-            <i class="fa fa-map-marker"></i>
-            <h5>Address:</h5>
-            <p>
-              <a href="https://goo.gl/maps/poA7HU66QMDjPmKC8"
-                >Trivandrum, India</a
-              >
-            </p>
-            <i class="fa fa-envelope"></i>
-            <h5>Email:</h5>
-            <p><a href="mailto:jith4j@gmail.com">jith4j@gmail.com</a></p>
+          <div class="skills-set">
+            <div class="course">
+              <div class="each-set">Guidehouse, India</div>
+              <div>Associate Data Engineer</div>
+              <div class="dates">December 2021 - June 2022</div>
+              <div class="course-list">
+                <ul>
+                  <li>Extract-Transform-Load (ETL) tasks using SQL</li>
+                  <li>Collaborated in developing data pipelines</li>
+                  <li>Data storage and efficient retrieval</li>
+                  <li>Technical documentation related to ETL processes.</li>
+                  <li>
+                    Developed chatbot using Microsoft Power Apps (Power
+                    Automate, Power Virtual Agent, etc.) resulting in 85%
+                    reduction in workload for maintenance team.
+                  </li>
+                  <li>
+                    Achieved the recogintion of the Best Employee Award during
+                    probationary period.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="course">
+              <div class="each-set">DDU-GKY, Govt. of India</div>
+              <div>Teaching Assistant</div>
+              <div class="dates">February 2022 - May 2022</div>
+              <div class="course-list">
+                <ul>
+                  <li>
+                    Successfully instructed a Python course to a class of 40
+                    students resulting in 90% of the students securing job
+                    positions.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="course">
+              <div class="each-set">Full Creative, India</div>
+              <div>Full Stack Developer - Intern</div>
+              <div class="dates">August 2021 - October 2021</div>
+              <div class="course-list">
+                <ul>
+                  <li>
+                    Developed and maintained web applications using
+                    JavaScript, NodeJS, and Google Cloud Platform.
+                  </li>
+                  <li>
+                    Collaborated with a team of 4 developers, participating in
+                    daily stand-ups and code reviews.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="course">
+              <div class="each-set">Artil Solutions, India</div>
+              <div>Frontend developer - Intern</div>
+              <div class="dates">December 2018 - August 2020</div>
+              <div class="course-list">
+                <ul>
+                  <li>
+                    Developed high-quality website solutions while working
+                    with a team of 3 developers using HTML, CSS, JavaScript.
+                  </li>
+                  <li>
+                    Implemented SEO strategies that improved website traffic
+                    by 50% and drove a 20% increase in online sales.
+                  </li>
+                  <li>
+                    Contributed to the successful completion of multiple
+                    projects over a 20-month internship period.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects section -->
+        <div class="skills-section" id="projects-section">
+          <div class="sec-heading">
+            Projects and Leadership<span class="set-col">.</span>
+          </div>
+          <div class="skills-set">
+            <div class="course">
+              <div class="each-set">
+                Wiki QA (Question Answering) Framework
+              </div>
+              <div>The University of Western Australia</div>
+              <div class="dates">May 2023</div>
+              <div class="course-list">
+                <ul>
+                  <li>
+                    Implemented a Wiki QA (Question Answering) framework using
+                    sequence models and various NLP features.
+                  </li>
+                  <li>
+                    Utilized the
+                    <span class="bold">Microsoft Research WikiQA</span>
+                    Corpus, a collection of question and sentence pairs, to
+                    train and test the framework.
+                  </li>
+                  <li>
+                    Developed a deep learning model with word embedding,
+                    feature extraction (such as PoS tags, TF-IDF, named entity
+                    tags, and word match), and a sequence model (e.g.,
+                    Bi-LSTM) with attention for improved performance.
+                  </li>
+                </ul>
+                <div class="each-set">Tools:</div>
+                <div class="each-lang-wrap">
+                  <div class="each-lang">Python</div>
+                  <div class="each-lang">Jupyter Notebook</div>
+                  <div class="each-lang">Word Embedding</div>
+                  <div class="each-lang">TensorFlow</div>
+                  <div class="each-lang">Data Wrangling Techniques</div>
+                  <div class="each-lang">Feature Extraction</div>
+                </div>
+              </div>
+            </div>
+            <div class="course">
+              <div class="each-set">
+                Chest X-Ray Image detection of Tuberculosis using Deep Neural
+                Network
+              </div>
+              <div>Marian Engineering College, India</div>
+              <div class="dates">September 2018</div>
+              <div class="course-list">
+                <ul>
+                  <li>
+                    Lead a team of 4 members to develop a machine learning
+                    model for tuberculosis detection from chest X-ray images,
+                    achieving an accuracy of 96%.
+                  </li>
+                  <li>
+                    Implemented the model into a web application using Python,
+                    TensorFlow, Keras, and Flask.
+                  </li>
+                  <li>
+                    Opensourced the project on GitHub, making it open-source
+                    and accessible to the community for further collaboration.
+                  </li>
+                  <li>
+                    Presented the project in various technical events,
+                    including NCETTSS 2021, and won the Best Paper
+                    Presentation Award.
+                  </li>
+                  <li>
+                    Strengthened skills in team management, communication,
+                    problem-solving, and critical thinking by leading the
+                    project from ideation to deployment.
+                  </li>
+                  <li>
+                    <b>Website:</b>
+                    <a href="https://github.com/jith4j/Tuberculosis-Classification">Tuberculosis-classification</a>
+                  </li>
+                  <li><b>Role:</b> Project Lead</li>
+                </ul>
+              </div>
+            </div>
+            <div class="course">
+              <div class="each-set">KTU Hub</div>
+              <div>Computer Science and Engineering Notes</div>
+              <div class="course-list">
+                <ul>
+                  <li>
+                    Created and launched a website providing B. Tech
+                    Engineering notes, resulting in 1000's of visits per month
+                    from students all over 14 districts.
+                  </li>
+                  <li>
+                    <b>Website:</b>
+                    <a href="http://engineeringnotes.epizy.com">KTU HUB</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="course">
+              <div class="each-set">Covid Vaccine Alert Bot</div>
+              <div>Python - Telegram API bot</div>
+              <div class="course-list">
+                <ul>
+                  <li>
+                    Developed a Telegram bot that sends real-time alerts for
+                    vaccine availability, which helped 100's of users secure
+                    vaccine appointments.
+                  </li>
+                  <li>
+                    <b>Github:</b>
+                    <a href="https://github.com/jith4j/covid-vaccine-alert-bot">Covid Vaccine Alert Bot</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Awards section -->
+        <div class="skills-section" id="awards-section">
+          <div class="sec-heading">Awards<span class="set-col">.</span></div>
+          <div class="skills-set">
+            <div class="course">
+              <div class="course-list">
+                <ul>
+                  <li>
+                    Volunteered as a frontend developer for Western Australia
+                    Debating League as part of Coders for Causes (CFC, UWA)
+                  </li>
+                  <li>
+                    Received the Best Paper Award in “NCETTSS 2021” at Marian
+                    Engineering College in July 2021 for “Chest X-Ray Image
+                    Classification for Tuberculosis using Deep Convolutional
+                    Neural Network”.
+                  </li>
+                  <li>
+                    Ranked #5783 (out of 200k participants) in the All-India
+                    CodeVita coding competition conducted by TCS in September
+                    2020.
+                  </li>
+                  <li>
+                    Elected as Senate Member of the governing student body of
+                    Marian Engineering College, serving from 2018 to 2021.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Contact End -->
+  </div>
+</body>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row footer-icon">
-          <div class="">
-            <a href="https://github.com/jith4j">
-              <i class="fa fa-github"></i>
-            </a>
-          </div>
-          <div class="">
-            <a href="https://www.linkedin.com/in/jith4j">
-              <i class="fa fa-linkedin"></i>
-            </a>
-          </div>
-          <div class="">
-            <a href="https://www.instagram.com/proxima__centauri___/">
-              <i class="fa fa-instagram"></i>
-            </a>
-          </div>
-          <div class="">
-            <a href="https://twitter.com/Jith__James">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright text-center py-3">
-        © 2020 Copyright:
-        <a href="http://www.jith.epizy.com" class="footer-name"> JITH</a>
-      </div>
-    </footer>
-    <!-- Footer End -->
-
-    <script>
-      $(function () {
-        var navMain = $(".navbar-collapse");
-
-        navMain.on("click", "a", null, function () {
-          navMain.collapse("hide");
-        });
-      });
-    </script>
-
-    <script src="app.js"></script>
-  </body>
 </html>

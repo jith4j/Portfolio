@@ -1,4 +1,4 @@
 # Profile
 Personal Website
 
-© Copyright 2020: Jith
+© Copyright 2024: Jith
