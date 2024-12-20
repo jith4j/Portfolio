@@ -59,7 +59,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 4%;
+  width: 5.5%;
   background-color: #17252a;
   color: #feffff;
   border-radius: 10px;
@@ -139,6 +139,31 @@ body {
 .each-lang:hover {
   background-color: #3aafa9;
   color: #feffff;
+}
+
+.contact-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: #3aafa9;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-links a:hover {
+  color: #17252a;
+}
+
+.contact-links i {
+  font-size: 1.2rem;
 }
 
 .my-img {
@@ -350,4 +375,26 @@ body {
   .each-lang-wrap {
     width: 100%;
   }
+}
+
+.project-links {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-links a {
+  text-decoration: none;
+  color: #3aafa9;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-links a:hover {
+  color: #17252a;
+}
+
+.project-links i {
+  font-size: 1.2rem;
 }
