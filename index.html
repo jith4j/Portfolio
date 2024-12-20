@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jith</title>
+  <title>Jith James Fernandez</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" href="./assets/icon.png">
   <link rel="stylesheet" href="./styles.css">
-  <script src="./script.js"></script>
 </head>
 
 <body>
@@ -27,11 +26,13 @@
         <div class="header-item" onclick="scrollToSection(event, '#home-contents', true)">Home</div>
         <div class="header-item" onclick="scrollToSection(event, '#about-section', true)">About</div>
         <div class="header-item" onclick="scrollToSection(event, '#skills-section', true)">Skills</div>
-        <div class="header-item" onclick="scrollToSection(event, '#eductaion-section', true)">Education</div>
-        <div class="header-item" onclick="scrollToSection(event, '#experience-section', true)">Exp.</div>
+        <div class="header-item" onclick="scrollToSection(event, '#education-section', true)">Education</div>
+        <div class="header-item" onclick="scrollToSection(event, '#experience-section', true)">Experience</div>
         <div class="header-item" onclick="scrollToSection(event, '#projects-section', true)">Projects</div>
-        <div class="header-item" onclick="scrollToSection(event, '#awards-section', true)">Awards</div>
+        <div class="header-item" onclick="scrollToSection(event, '#awards-section', true)">Achievements</div>
       </div>
+
+      <!-- Home Section -->
       <div class="body-sec" id="home">
         <div class="top-section" id="home-contents">
           <div class="titles">
@@ -41,424 +42,189 @@
               <div><span class="set-col">F</span>ERNANDEZ</div>
             </div>
             <div class="author-titles">
+              <div class="title-bar">Data Analyst</div>
               <div class="title-bar">Data Engineer</div>
-              <div class="title-bar">Data Scientist</div>
-              <div class="title-bar">Web Developer</div>
+              <div class="title-bar">Business Intelligence Specialist</div>
             </div>
           </div>
           <div class="img">
-            <img class="my-img" src="./assets/img.png" alt="" />
+            <img class="my-img" src="./assets/img2.png" alt="Jith James Fernandez" />
           </div>
         </div>
 
-        <!-- About section -->
+        <!-- About Section -->
         <div class="skills-section" id="about-section">
           <div class="sec-heading">About<span class="set-col">.</span></div>
           <div class="skills-set">
             <div class="about-author">
-              Experienced data engineer and web developer with a bachelor’s in Computer Science and Engineering and
-              pursuing a Master's in Data Science, possessing excellent communication and problem-solving skills.
-              Proficient in programming languages like Python, R, C, Java, and JavaScript, and web development tools
-              like HTML5, CSS3, and NodeJS. Skilled in data science techniques such as data analysis, machine learning,
-              data visualization, and BI tools like Tableau and Power BI. Strong experience in ETL development using SQL
-              and SSIS for data integration and migration projects with a focus on data accuracy and quality.
+              Master of Data Science graduate (July 2024) with combined 2 years of experience in data analysis, data
+              engineering, and
+              business intelligence, spanning academic research and professional roles. Adept at data storytelling and
+              dashboard
+              building, I specialise in designing intuitive, impactful dashboards and translating complex datasets into
+              actionable
+              insights, ensuring stakeholders understand and utilise information effectively. A natural storyteller and
+              problem-solver, I am persistent in uncovering solutions and ensuring my insights resonate with diverse
+              audiences.
+              Skilled in tools like SQL, Power BI, and data pipelines, I bring a results-driven approach that combines
+              technical
+              expertise, analytical precision, and a collaborative mindset to bridge the gap between data and
+              decision-making,
+              delivering impactful solutions.
             </div>
           </div>
         </div>
 
-        <!-- Skills section -->
+        <div class="resume-section" id="resume-section">
+          <div class="resume-download">
+            <button onclick="openResumeInNewWindow()">
+              <img src="./assets/Download.svg" alt="Download Icon" class="download-icon">
+              View My Resume
+            </button>
+          </div>
+        </div>
+
+        <!-- Skills Section -->
         <div class="skills-section" id="skills-section">
           <div class="sec-heading">Skills<span class="set-col">.</span></div>
           <div class="skills-set">
-            <div class="each-set">Programming language and Tools:</div>
+            <div class="each-set">Data Engineering & Analytics:</div>
+            <div class="each-lang-wrap">
+              <div class="each-lang">Advanced SQL</div>
+              <div class="each-lang">Spatial Data Analysis</div>
+              <div class="each-lang">Data Transformation</div>
+              <div class="each-lang">Data Modelling</div>
+              <div class="each-lang">ETL Processes</div>
+              <div class="each-lang">Data Quality Improvement</div>
+            </div>
+            <div class="each-set">Business Intelligence:</div>
+            <div class="each-lang-wrap">
+              <div class="each-lang">Power BI (DAX, Power Query)</div>
+              <div class="each-lang">Data Visualisation</div>
+              <div class="each-lang">Data Storytelling</div>
+              <div class="each-lang">Dashboard Development</div>
+            </div>
+            <div class="each-set">Technical Proficiency:</div>
             <div class="each-lang-wrap">
               <div class="each-lang">Python</div>
-              <div class="each-lang">SQL</div>
-              <div class="each-lang">R</div>
-              <div class="each-lang">C</div>
-              <div class="each-lang">Java</div>
-              <div class="each-lang">Javascript</div>
-              <div class="each-lang">Jupyter Notebook</div>
-              <div class="each-lang">Microsoft Power Apps</div>
-            </div>
-            <div class="each-set">Data Science:</div>
-            <div class="each-lang-wrap">
-              <div class="each-lang">Data Analysis</div>
+              <div class="each-lang">Natural Language Processing</div>
+              <div class="each-lang">Reporting Tools</div>
               <div class="each-lang">Machine Learning</div>
-              <div class="each-lang">Power BI</div>
-              <div class="each-lang">Tableau</div>
-              <div class="each-lang">SSIS</div>
             </div>
-            <div class="each-set">Libraries:</div>
+            <div class="each-set">Agile Methodology:</div>
             <div class="each-lang-wrap">
-              <div class="each-lang">Pandas</div>
-              <div class="each-lang">Matplotlib</div>
-              <div class="each-lang">NumPy</div>
-              <div class="each-lang">Keeras</div>
-              <div class="each-lang">GGPlot</div>
-              <div class="each-lang">Gensim</div>
-              <div class="each-lang">Seaborn</div>
-            </div>
-            <div class="each-set">Web Development:</div>
-            <div class="each-lang-wrap">
-              <div class="each-lang">HTML 5</div>
-              <div class="each-lang">CSS</div>
-              <div class="each-lang">SCSS</div>
-              <div class="each-lang">Javascript</div>
-              <div class="each-lang">Node js</div>
-              <div class="each-lang">Responsive Web design</div>
-              <div class="each-lang">Angular js</div>
-              <div class="each-lang">Next js</div>
-            </div>
-            <div class="each-set">Cloud Platform:</div>
-            <div class="each-lang-wrap">
-              <div class="each-lang">Google Cloud Platform</div>
-              <div class="each-lang">Azure</div>
-            </div>
-            <div class="each-set">Version Control:</div>
-            <div class="each-lang-wrap">
-              <div class="each-lang">Git</div>
-              <div class="each-lang">Git Hub</div>
-              <div class="each-lang">TFS</div>
-            </div>
-            <div class="each-set">Personal:</div>
-            <div class="each-lang-wrap">
-              <div class="each-lang">Managerial Competence</div>
-              <div class="each-lang">Collaboration</div>
-              <div class="each-lang">Detail Oriented</div>
-              <div class="each-lang">Adaptability</div>
-              <div class="each-lang">Self-Motivated</div>
-              <div class="each-lang">Attention to detail</div>
-              <div class="each-lang">Team player</div>
-              <div class="each-lang">Time management</div>
-              <div class="each-lang">Problem-solving</div>
-              <div class="each-lang">Decision-making</div>
+              <div class="each-lang">Sprint planning</div>
+              <div class="each-lang">Iterative delivery</div>
+              <div class="each-lang">Risk mitigation</div>
             </div>
           </div>
         </div>
 
-        <!-- Education section -->
-        <div class="skills-section" id="eductaion-section">
-          <div class="sec-heading">
-            Education<span class="set-col">.</span>
-          </div>
+        <!-- Education Section -->
+        <div class="skills-section" id="education-section">
+          <div class="sec-heading">Education<span class="set-col">.</span></div>
           <div class="skills-set">
             <div class="course">
-              <div class="each-set">The University Of Western Australia</div>
-              <div>Masters of Data Science</div>
-              <div class="dates">2022-2024</div>
-              <div class="course-list">
-                <ul>
-                  <li>Data Mining</li>
-                  <li>Data Analysis</li>
-                  <li>Database Management</li>
-                  <li>Machine Learning</li>
-                  <li>Data Visualisation</li>
-                  <li>Statistics</li>
-                </ul>
-              </div>
+              <div class="each-set">The University of Western Australia</div>
+              <div>Master of Data Science</div>
+              <div class="dates">2022–2024</div>
             </div>
             <div class="course">
-              <div class="each-set">
-                APJ Abdul Kalam Technological University
-              </div>
-              <div>
-                Bachelor of Technology in
-                <span class="bold">Computer Science and Engineering</span>
-              </div>
-              <div class="dates">2017-2021</div>
-              Cumulative GPA: <span class="bold"> 9.5/10 </span>
-              <div class="course-list">
-                <ul>
-                  <li>Data Structures</li>
-                  <li>Algorithms</li>
-                  <li>Operating Systems</li>
-                  <li>Computer Networks</li>
-                  <li>Web Development</li>
-                  <li>Software Engineering</li>
-                  <li>Project Management</li>
-                </ul>
-              </div>
+              <div class="each-set">APJ Abdul Kalam Technological University</div>
+              <div>Bachelor of Technology in Computer Science & Engineering</div>
+              <div class="dates">2016–2021</div>
             </div>
           </div>
         </div>
 
-        <!-- Experience section -->
+        <!-- Experience Section -->
         <div class="skills-section" id="experience-section">
-          <div class="sec-heading">
-            Experience<span class="set-col">.</span>
-          </div>
+          <div class="sec-heading">Experience<span class="set-col">.</span></div>
           <div class="skills-set">
             <div class="course">
-              <div class="each-set">Guidehouse, India</div>
-              <div>Associate Data Engineer</div>
-              <div class="dates">December 2021 - June 2022</div>
-              <div class="course-list">
-                <ul>
-                  <li>Extract-Transform-Load (ETL) tasks using SQL</li>
-                  <li>Collaborated in developing data pipelines</li>
-                  <li>Data storage and efficient retrieval</li>
-                  <li>Technical documentation related to ETL processes.</li>
-                  <li>
-                    Developed chatbot using Microsoft Power Apps (Power
-                    Automate, Power Virtual Agent, etc.) resulting in 85%
-                    reduction in workload for maintenance team.
-                  </li>
-                  <li>
-                    Achieved the recogintion of the Best Employee Award during
-                    probationary period.
-                  </li>
-                </ul>
-              </div>
+              <div class="each-set">JB HiFi</div>
+              <div>Sales Team Member (Telco)</div>
+              <div class="dates">Nov 2023 - Present</div>
+              <ul>
+                <li>Exceeded KPIs by tailoring solutions to customer needs, showcasing strong analytical and
+                  interpersonal skills.</li>
+                <li>Simplified technical product information for non-technical customers, ensuring a 20% improvement in
+                  satisfaction scores.</li>
+                <li>Recognised as the Top Salesperson in Telco for Nov and Dec 2024, bringing the highest telco
+                  incentives to the store in the entire area.</li>
+              </ul>
             </div>
+
             <div class="course">
-              <div class="each-set">DDU-GKY, Govt. of India</div>
-              <div>Teaching Assistant</div>
-              <div class="dates">February 2022 - May 2022</div>
-              <div class="course-list">
-                <ul>
-                  <li>
-                    Successfully instructed a Python course to a class of 40
-                    students resulting in 90% of the students securing job
-                    positions.
-                  </li>
-                </ul>
-              </div>
+              <div class="each-set">Guidehouse</div>
+              <div>Data Engineer</div>
+              <div class="dates">2021–2022</div>
+              <ul>
+                <li>Built Power BI dashboards to analyse large medical datasets, driving operational efficiencies.</li>
+                <li>Designed ETL workflows using SQL and SSIS, reducing data rejection rates by 15%.</li>
+                <li>Led automation initiatives with Power Automate, reducing workflow overhead by 60%.</li>
+              </ul>
             </div>
+
             <div class="course">
-              <div class="each-set">Full Creative, India</div>
-              <div>Full Stack Developer - Intern</div>
-              <div class="dates">August 2021 - October 2021</div>
-              <div class="course-list">
-                <ul>
-                  <li>
-                    Developed and maintained web applications using
-                    JavaScript, NodeJS, and Google Cloud Platform.
-                  </li>
-                  <li>
-                    Collaborated with a team of 4 developers, participating in
-                    daily stand-ups and code reviews.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="course">
-              <div class="each-set">Artil Solutions, India</div>
-              <div>Frontend developer - Intern</div>
-              <div class="dates">December 2018 - August 2020</div>
-              <div class="course-list">
-                <ul>
-                  <li>
-                    Developed high-quality website solutions while working
-                    with a team of 3 developers using HTML, CSS, JavaScript.
-                  </li>
-                  <li>
-                    Implemented SEO strategies that improved website traffic
-                    by 50% and drove a 20% increase in online sales.
-                  </li>
-                  <li>
-                    Contributed to the successful completion of multiple
-                    projects over a 20-month internship period.
-                  </li>
-                </ul>
-              </div>
+              <div class="each-set">DDU-GKY – Govt. India</div>
+              <div>Teaching Assistant (Python Programming)</div>
+              <div class="dates">Feb 2022 – May 2022</div>
+              <ul>
+                <li>Delivered Python programming curriculum, achieving an 85% job placement rate for non-CS graduates.
+                </li>
+                <li>Provided mentorship, improving comprehension of technical concepts among diverse audiences.</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <!-- Projects section -->
+        <!-- Projects Section -->
         <div class="skills-section" id="projects-section">
-          <div class="sec-heading">
-            Projects and Leadership<span class="set-col">.</span>
-          </div>
+          <div class="sec-heading">Projects<span class="set-col">.</span></div>
           <div class="skills-set">
             <div class="course">
-              <div class="each-set">
-                Semantic Word Search (Capstone project & University of Western Australia)
-              </div>
-              <div>The University of Western Australia</div>
-              <div class="dates">May 2023</div>
-              <div class="course-list">
-                <ul>
-                  <li>
-                    Implemented a Wiki QA (Question Answering) framework using
-                    sequence models and various NLP features.
-                  </li>
-                  <li>
-                    Utilized the
-                    <span class="bold">Microsoft Research WikiQA</span>
-                    Corpus, a collection of question and sentence pairs, to
-                    train and test the framework.
-                  </li>
-                  <li>
-                    Developed a deep learning model with word embedding,
-                    feature extraction (such as PoS tags, TF-IDF, named entity
-                    tags, and word match), and a sequence model (e.g.,
-                    Bi-LSTM) with attention for improved performance.
-                  </li>
-                </ul>
-                <div class="each-set">Tools:</div>
-                <div class="each-lang-wrap">
-                  <div class="each-lang">Python</div>
-                  <div class="each-lang">Jupyter Notebook</div>
-                  <div class="each-lang">Word Embedding</div>
-                  <div class="each-lang">TensorFlow</div>
-                  <div class="each-lang">Data Wrangling Techniques</div>
-                  <div class="each-lang">Feature Extraction</div>
-                </div>
-              </div>
+              <div class="each-set">WA Crime Analytics Dashboard</div>
+              <div class="dates">November 2024</div>
+              <ul>
+                <li>Created interactive Power BI dashboards analysing WA crime data across districts.</li>
+                <li>Derived actionable insights into crime trends, aiding data-driven policymaking.</li>
+                <li>Streamlined raw data processing using Power BI and applied advanced DAX measures for comparative
+                  analyses.</li>
+              </ul>
             </div>
+
             <div class="course">
-              <div class="each-set">
-                Wiki QA (Question Answering) Framework
-              </div>
-              <div>The University of Western Australia</div>
-              <div class="dates">May 2023</div>
-              <div class="course-list">
-                <ul>
-                  <li>
-                    Implemented a Wiki QA (Question Answering) framework using
-                    sequence models and various NLP features.
-                  </li>
-                  <li>
-                    Utilized the
-                    <span class="bold">Microsoft Research WikiQA</span>
-                    Corpus, a collection of question and sentence pairs, to
-                    train and test the framework.
-                  </li>
-                  <li>
-                    Developed a deep learning model with word embedding,
-                    feature extraction (such as PoS tags, TF-IDF, named entity
-                    tags, and word match), and a sequence model (e.g.,
-                    Bi-LSTM) with attention for improved performance.
-                  </li>
-                </ul>
-                <div class="each-set">Tools:</div>
-                <div class="each-lang-wrap">
-                  <div class="each-lang">Python</div>
-                  <div class="each-lang">Jupyter Notebook</div>
-                  <div class="each-lang">Word Embedding</div>
-                  <div class="each-lang">TensorFlow</div>
-                  <div class="each-lang">Data Wrangling Techniques</div>
-                  <div class="each-lang">Feature Extraction</div>
-                </div>
-              </div>
+              <div class="each-set">Semantic Word Search - Capstone project</div>
+              <div class="dates">Department of Finance, WA | Nov 2023 – Feb 2024</div>
+              <ul>
+                <li>Designed an AI-powered platform reducing document retrieval time by 99% through NLP and semantic
+                  search techniques.</li>
+                <li>Created data visualisations to present actionable insights to the leadership team.</li>
+              </ul>
             </div>
+
             <div class="course">
-              <div class="each-set">
-                Chest X-Ray Image detection of Tuberculosis using Deep Neural
-                Network
-              </div>
-              <div>Marian Engineering College, India</div>
-              <div class="dates">September 2018</div>
-              <div class="course-list">
-                <ul>
-                  <li>
-                    Lead a team of 4 members to develop a machine learning
-                    model for tuberculosis detection from chest X-ray images,
-                    achieving an accuracy of 96%.
-                  </li>
-                  <li>
-                    Implemented the model into a web application using Python,
-                    TensorFlow, Keras, and Flask.
-                  </li>
-                  <li>
-                    Opensourced the project on GitHub, making it open-source
-                    and accessible to the community for further collaboration.
-                  </li>
-                  <li>
-                    Presented the project in various technical events,
-                    including NCETTSS 2021, and won the Best Paper
-                    Presentation Award.
-                  </li>
-                  <li>
-                    Strengthened skills in team management, communication,
-                    problem-solving, and critical thinking by leading the
-                    project from ideation to deployment.
-                  </li>
-                  <li>
-                    <b>Website:</b>
-                    <a href="https://github.com/jith4j/Tuberculosis-Classification">Tuberculosis-classification</a>
-                  </li>
-                  <li><b>Role:</b> Project Lead</li>
-                </ul>
-              </div>
-            </div>
-            <div class="course">
-              <div class="each-set">KTU Hub</div>
-              <div>Computer Science and Engineering Notes</div>
-              <div class="course-list">
-                <ul>
-                  <li>
-                    Created and launched a website providing B. Tech
-                    Engineering notes, resulting in 1000's of visits per month
-                    from students all over 14 districts.
-                  </li>
-                  <li>
-                    <b>Website:</b>
-                    <a href="http://engineeringnotes.epizy.com">KTU HUB</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="course">
-              <div class="each-set">Covid Vaccine Alert Bot</div>
-              <div>Python - Telegram API bot</div>
-              <div class="course-list">
-                <ul>
-                  <li>
-                    Developed a Telegram bot that sends real-time alerts for
-                    vaccine availability, which helped 100's of users secure
-                    vaccine appointments.
-                  </li>
-                  <li>
-                    <b>Github:</b>
-                    <a href="https://github.com/jith4j/covid-vaccine-alert-bot">Covid Vaccine Alert Bot</a>
-                  </li>
-                </ul>
-              </div>
+              <div class="each-set">Tuberculosis Classification from Chest X-rays</div>
+              <div class="dates">Apr 2018 – Sep 2018</div>
+              <ul>
+                <li>Led a team and developed an AI model achieving 96% accuracy in TB detection, recognised with the
+                  Best Paper Presentation Award.</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <!-- Awards section -->
+        <!-- Achievements Section -->
         <div class="skills-section" id="awards-section">
-          <div class="sec-heading">Awards<span class="set-col">.</span></div>
+          <div class="sec-heading">Achievements<span class="set-col">.</span></div>
           <div class="skills-set">
-            <div class="course">
-              <div class="course-list">
-                <ul>
-                  <li>
-                    Volunteered as a frontend developer for Western Australia
-                    Debating League as part of Coders for Causes (CFC, UWA)
-                  </li>
-                  <li>
-                    Received the Best Paper Award in “NCETTSS 2021” at Marian
-                    Engineering College in July 2021 for “Chest X-Ray Image
-                    Classification for Tuberculosis using Deep Convolutional
-                    Neural Network”.
-                  </li>
-                  <li>
-                    Ranked #5783 (out of 200k participants) in the All-India
-                    CodeVita coding competition conducted by TCS in September
-                    2020.
-                  </li>
-                  <li>
-                    Elected as Senate Member of the governing student body of
-                    Marian Engineering College, serving from 2018 to 2021.
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <ul>
+              <li>Built a chatbot at Guidehouse, reducing workflow overhead by 60%.</li>
+              <li>Delivered a semantic word search platform, recognised for improving efficiency by 99%.</li>
+            </ul>
           </div>
         </div>
-        <footer class="footer">
-          <div class="footer-content">
-            <a href="https://github.com/jith4j" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/jith4j" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:jith4j@gmail.com"><i class="fas fa-envelope"></i></a>
-          </div>
-        </footer>
       </div>
     </div>
   </div>

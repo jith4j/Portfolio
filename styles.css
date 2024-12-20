@@ -142,8 +142,8 @@ body {
 }
 
 .my-img {
-  width: 33rem;
-  height: 33rem;
+  width: 37rem;
+  height: 34rem;
   border-radius: 10px;
 }
 
@@ -223,6 +223,35 @@ body {
   right: 10px;
   font-size: 24px;
   cursor: pointer;
+}
+
+.resume-section {
+  text-align: center;
+}
+
+.resume-download button {
+  background-color: #3aafa9; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-download button img.download-icon {
+  margin-right: 8px;
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Adjust the size as needed */
+}
+
+.resume-download button:hover {
+  background-color: #3aafa9;
 }
 
 @media (max-width: 768px) {

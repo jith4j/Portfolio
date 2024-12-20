@@ -3,7 +3,7 @@ let currentContentId = "hyperlinks";
 var authorPage = fasle;
 
 function scrollToSection(event, sectionId, authorPage) {
-  event.preventDefault(); // prevents event bubbling
+  event.preventDefault();
   const targetSection = document.querySelector(sectionId);
   targetSection.scrollIntoView({ behavior: "smooth" }); // provides a smoother scrolling effect
   const clickedItem = event.target;
@@ -69,4 +69,8 @@ function scrollToSection(event, sectionId, authorPage) {
 function toggleSidebar() {
   const sideNavBar = document.getElementById("side-nav-bar");
   sideNavBar.classList.toggle("active");
+}
+
+function openResumeInNewWindow() {
+  window.open("./assets/resume.pdf", "_blank");
 }
