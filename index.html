@@ -121,9 +121,10 @@ html:not(.motion) .cue i{animation:none}
   .motion .counter .bar b{position:absolute;inset:0;background:var(--accent);transform-origin:left;transform:scaleX(var(--p,0))}
 }
 @media (max-width:760px){
-  .motion .process .pin{justify-content:flex-end;padding-bottom:110px}
-  .motion .process .steps{height:300px}
-  .motion .counter{bottom:40px}
+  .motion .process .pin{justify-content:flex-end;padding-bottom:84px}
+  .motion .process .steps{height:280px}
+  .motion .process .step h3{font-size:30px}
+  .motion .counter{bottom:32px}
 }
 
 /* ── 03 WORK ────────────────────────────────────────────── */
@@ -221,6 +222,7 @@ footer{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;ma
 .seal .core b{font-size:clamp(22px,2.5vw,36px);font-weight:800;letter-spacing:-.03em;line-height:1}
 .seal .core small{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
 @keyframes spin{to{transform:rotate(360deg)}}
+@keyframes cardin{from{opacity:0;transform:translateY(14px)}}
 html:not(.motion) .seal svg{animation:none}
 
 /* ── 03 PATH: auto-playing reel, one stage per screen ──── */
@@ -249,6 +251,7 @@ details li{margin:8px 0}
 html:not(.motion).js .reel{grid-template-columns:1fr}
 .reelnav{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin-top:44px}
 .reelnav[hidden]{display:none}
+.js .reel>.reelnav{grid-column:1/-1;grid-row:2}
 .strip{display:flex;flex:1 1 520px;min-width:0;overflow-x:auto;gap:0;border-top:1px solid var(--line)}
 .strip button{flex:1 0 auto;min-width:84px;min-height:48px;padding:10px 10px 6px;background:none;border:0;border-right:1px solid var(--line);color:var(--mute);font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;text-align:left;cursor:pointer;position:relative;transition:color .3s}
 .strip button b{display:block;font-family:var(--display);font-size:20px;font-weight:800;letter-spacing:-.03em;color:var(--fg);opacity:.45;transition:opacity .3s}
@@ -258,10 +261,13 @@ html:not(.motion).js .reel{grid-template-columns:1fr}
 .strip button:hover b{opacity:1}
 @media (max-width:860px){
   .js .reel{grid-template-columns:1fr;gap:18px}
-  .js .track{grid-row:1}
-  .motion .yearbox{grid-row:2;grid-column:1;height:96px}
-  .js .path{padding-top:96px}
-  .reelnav{margin-top:12px}
+  .js .path{padding-top:96px;min-height:0}
+  .js .reel{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .motion .yearbox{order:1;height:96px;margin-bottom:12px}
+  .reelnav{order:2;margin-top:0}
+  .js .track{order:3;margin-top:28px}
+  .js .card:not(.on){display:none}
+  .js .card.on{animation:cardin .5s var(--ease)}
   details ul{font-size:16px}
 }
 
@@ -385,6 +391,12 @@ html:not(.motion).js .reel{grid-template-columns:1fr}
   </div>
   <div class="reel">
     <div class="yearbox" aria-hidden="true"></div>
+    <div class="reelnav" hidden>
+    <button class="btn icon" type="button" id="prev" aria-label="Previous stage">←</button>
+    <button class="btn icon" type="button" id="play" aria-label="Pause autoplay" aria-pressed="false">❚❚</button>
+    <button class="btn icon" type="button" id="next" aria-label="Next stage">→</button>
+    <div class="strip" role="group" aria-label="Career stages"></div>
+  </div>
     <ol class="track">
       <li data-short="CAHS now" class="card now"><div class="yr">2026</div><h3>Data Analyst</h3><div class="org">Child and Adolescent Health Service · Feb 2026 to present</div>
         <ul class="chips"><li>Microsoft Fabric</li><li>Power BI</li><li>SQL Server</li><li>Python</li><li>R</li></ul>
@@ -417,12 +429,6 @@ html:not(.motion).js .reel{grid-template-columns:1fr}
         <ul class="chips"><li>Python</li><li>Machine learning</li></ul>
         <details><summary>Detail</summary><ul><li>GPA 9.5/10. Best Outgoing Student.</li><li>Led a team building a tuberculosis classifier for chest X-rays: 96% accuracy, Best Paper Presentation Award.</li></ul></details></li>
       </ol>
-  </div>
-  <div class="reelnav" hidden>
-    <button class="btn icon" type="button" id="prev" aria-label="Previous stage">←</button>
-    <button class="btn icon" type="button" id="play" aria-label="Pause autoplay" aria-pressed="false">❚❚</button>
-    <button class="btn icon" type="button" id="next" aria-label="Next stage">→</button>
-    <div class="strip" role="group" aria-label="Career stages"></div>
   </div>
 </section>
 
@@ -611,7 +617,7 @@ document.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; });
 /* Seeded random so layouts are stable between frames and resizes. */
 function rng(seed) { return () => (seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296; }
 /* Where the structured shapes sit: right side on wide screens, top on phones. */
-function region() { return W > 760 ? { x: W * .54, y: H * .2, w: W * .4, h: H * .6 } : { x: W * .1, y: H * .15, w: W * .8, h: H * .31 }; }
+function region() { return W > 760 ? { x: W * .54, y: H * .2, w: W * .4, h: H * .6 } : { x: W * .1, y: 132, w: W * .8, h: Math.max(90, H - 512) }; }
 /* Turn a list of [x, y, accent] into a layout of exactly N points. */
 function fill(pts, a = .9) { const pos = new Float32Array(N * 2), acc = new Uint8Array(N), m = pts.length || 1;
   for (let i = 0; i < N; i++) { const p = pts[i % m] || [0, 0, 0]; pos[i*2] = p[0]; pos[i*2+1] = p[1]; acc[i] = p[2] ? 1 : 0; } return { pos, acc, a }; }
